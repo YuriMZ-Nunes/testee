@@ -19,11 +19,11 @@ A tabela abaixo destaca o desempenho com o maior vetor testado (1 milhão de ele
 
 O primeiro gráfico ilustra o ganho obtido apenas com a vetorização (SIMD) em uma única thread, comparado à versão sequencial base. Observa-se um ganho modesto, mas consistente, para todos os tamanhos de vetor.
 
-![Ganho da Vetorização (SIMD) em Single Thread](results/grafico_tarefa_c_simd_impact.png.png)
+![Ganho da Vetorização (SIMD) em Single Thread](results/grafico_tarefa_c_simd_impact.png)
 
 O segundo gráfico mostra a escalabilidade da versão paralela vetorizada (`OMP_PAR_SIMD`). É evidente a rápida saturação do speedup, que não ultrapassa 1.4x mesmo com várias threads, e o colapso de desempenho ao utilizar 16 threads, ficando pior que a versão sequencial.
 
-![Escalabilidade da Tarefa C (Parallel SIMD vs Sequencial)](results/grafico_tarefa_c_speedup.png.png)
+![Escalabilidade da Tarefa C (Parallel SIMD vs Sequencial)](results/grafico_tarefa_c_speedup.png)
 
 ### 1.3. Análise Crítica
 
@@ -54,7 +54,7 @@ Comparação do *overhead* entre criar threads repetidamente (Naive) vs reutiliz
 ### 2.2. Gráfico de Overhead
 O gráfico abaixo evidencia visualmente a enorme diferença de tempo de execução entre a abordagem ingênua (azul) e a arrumada (vermelho) para N=500.000. A versão arrumada mantém um tempo de execução baixo e constante, enquanto a ingênua é significativamente mais lenta e apresenta maior variação (indicada pelas barras de erro) e um aumento de tempo com 16 threads.
 
-![Comparação de Overhead na Tarefa D](results/grafico_tarefa_d_overhead.png.png)
+![Comparação de Overhead na Tarefa D](results/grafico_tarefa_d_overhead.png)
 
 ### 2.3. Análise de Overhead
 
